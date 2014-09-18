@@ -1,0 +1,151 @@
+%%%%% Own notations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\defarrow{\stackrel{def.}{\Longleftrightarrow}}
+
+\def\iseq{\stackrel{?}{=}}
+
+\def\issub{\stackrel{?}{\preceq}}
+
+\def\isgeq{\stackrel{?}{\geq}}
+
+\def\Naturals{\mathbb{N}}
+
+\def\Integers{\mathbb{Z}}
+
+\def\Rationals{\mathbb{Q}}
+
+\def\Irrationals{\mathbb{Q^*}}
+
+\def\Reals{\mathbb{R}}
+
+\def\Complex{\mathbb{C}}
+
+\def\Transcend{\mathbb{T}}
+
+\def\getAndSetFigureCounter
+  {\setcounter{figure}{\thefigure + 1}\thefigure}
+
+\newcommand{\hunquote}[1]{``#1''}
+
+%%%%% Non-default theorem environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mystyle}
+	{0pt}
+	{0pt}
+	{\normalfont}
+	{1em}
+	{\bfseries}
+	{\normalfont{:}}
+	{1em}
+	{}
+\theoremstyle{mystyle}
+
+% Theorems with difficulties
+\newtheorem{theorem}{Tétel}[section]
+\newtheorem{theorem2}[theorem]{$\dagger$ Tétel}
+\newtheorem{theorem3}[theorem]{$\maltese$ Tétel}
+\newtheorem{theorem4}[theorem]{$\pitchfork$ Tétel}
+\newtheorem{theorem5}[theorem]{$\bigstar$ Tétel}
+% Converses with difficulties
+\newtheorem{theoremconv}[theorem]{Tétel megfordítása}
+\newtheorem{theoremconv2}[theorem]{$\dagger$ Tétel megfordítása}
+\newtheorem{theoremconv3}[theorem]{$\maltese$ Tétel megfordítása}
+\newtheorem{theoremconv4}[theorem]{$\pitchfork$ Tétel megfordítása}
+\newtheorem{theoremconv5}[theorem]{$\bigstar$ Tétel megfordítása}
+% Theorem and converses with difficulties
+\newtheorem{theoremandconv}[theorem]{Tétel és megfordítása}
+\newtheorem{theoremandconv2}[theorem]{$\dagger$ Tétel és megfordítása}
+\newtheorem{theoremandconv3}[theorem]{$\maltese$ Tétel és megfordítása}
+\newtheorem{theoremandconv4}[theorem]{$\pitchfork$ Tétel és megfordítása}
+\newtheorem{theoremandconv5}[theorem]{$\bigstar$ Tétel és megfordítása}
+% Definitions with difficulties
+\newtheorem{defin}[theorem]{Definíció}
+\newtheorem{defin2}[theorem]{$\dagger$ Definíció}
+\newtheorem{defin3}[theorem]{$\maltese$ Definíció}
+\newtheorem{defin4}[theorem]{$\pitchfork$ Definíció}
+\newtheorem{defin5}[theorem]{$\bigstar$ Definíció}
+% Propositions with difficulties
+\newtheorem{prop}[theorem]{Állítás}
+\newtheorem{prop2}[theorem]{$\dagger$ Állítás}
+\newtheorem{prop3}[theorem]{$\maltese$ Állítás}
+\newtheorem{prop4}[theorem]{$\pitchfork$ Állítás}
+\newtheorem{prop5}[theorem]{$\bigstar$ Állítás}
+% Lemmata with difficulties
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{lemma2}[theorem]{$\dagger$ Lemma}
+\newtheorem{lemma3}[theorem]{$\maltese$ Lemma}
+\newtheorem{lemma4}[theorem]{$\pitchfork$ Lemma}
+\newtheorem{lemma5}[theorem]{$\bigstar$ Lemma}
+% Methods with difficulties
+\newtheorem{method}[theorem]{Módszer}
+\newtheorem{method2}[theorem]{$\dagger$ Módszer}
+\newtheorem{method3}[theorem]{$\maltese$ Módszer}
+\newtheorem{method4}[theorem]{$\pitchfork$ Módszer}
+\newtheorem{method5}[theorem]{$\bigstar$ Módszer}
+% Notes with difficulties
+\newtheorem{note}[theorem]{Megjegyzés}
+\newtheorem{note2}[theorem]{$\dagger$ Megjegyzés}
+\newtheorem{note3}[theorem]{$\maltese$ Megjegyzés}
+\newtheorem{note4}[theorem]{$\pitchfork$ Megjegyzés}
+\newtheorem{note5}[theorem]{$\bigstar$ Megjegyzés}
+% Generalisations with difficulties
+\newtheorem{general}[theorem]{Általánosítás}
+\newtheorem{general2}[theorem]{$\dagger$ Általánosítás}
+\newtheorem{general3}[theorem]{$\maltese$ Általánosítás}
+\newtheorem{general4}[theorem]{$\pitchfork$ Általánosítás}
+\newtheorem{general5}[theorem]{$\bigstar$ Általánosítás}
+% Examples with difficulties
+\newtheorem{example}[theorem]{Példa}
+\newtheorem{example2}[theorem]{$\dagger$ Példa}
+\newtheorem{example3}[theorem]{$\maltese$ Példa}
+\newtheorem{example4}[theorem]{$\pitchfork$ Példa}
+\newtheorem{example5}[theorem]{Példa}
+% Corollaries with difficulties
+\newtheorem{corollary}[theorem]{Következmény}
+\newtheorem{corollary2}[theorem]{$\dagger$ Következmény}
+\newtheorem{corollary3}[theorem]{$\maltese$ Következmény}
+\newtheorem{corollary4}[theorem]{$\pitchfork$ Következmény}
+\newtheorem{corollary5}[theorem]{$\bigstar$ Következmény}
+% We do not need conjunctions and assumptions for this document
+%\newtheorem{conj}[theorem]{Sejtés}
+%\newtheorem{assump}[theorem]{Feltételezés}
+
+%%%%% Non-default proof environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Own QED sign
+\renewcommand{\qed}
+   {$\mathcal{Q}$
+      \kern-.1667em\lower.6666ex
+    \hbox{$e$}
+      \kern-.1667em
+    $\mathfrak{D}$\@}
+
+% Proofs with difficulties
+\renewenvironment{proof}[1][22.7pt]
+  {\begin{tabular}{|p{\textwidth-#1}} \textit{Bizonyítás.}}
+  {\qed\end{tabular}\vspace{0.75em}}
+\newenvironment{proof2}[1][22.7pt]
+  {\begin{tabular}{|p{\textwidth-#1}} $\dagger$ \textit{Bizonyítás:}}
+  {\qed\end{tabular}\vspace{0.75em}}
+\newenvironment{proof3}[1][22.7pt]
+  {\begin{tabular}{|p{\textwidth-#1}} $\maltese$ \textit{Bizonyítás:}}
+  {\qed\end{tabular}\vspace{0.75em}}
+\newenvironment{proof4}[1][22.7pt]
+  {\begin{tabular}{|p{\textwidth-#1}} $\pitchfork$ \textit{Bizonyítás:}}
+  {\qed\end{tabular}\vspace{0.75em}}
+\newenvironment{proof5}[1][22.7pt]
+  {\begin{tabular}{|p{\textwidth-#1}} $\bigstar$ \textit{Bizonyítás:}}
+  {\qed\end{tabular}\vspace{0.75em}}
+% Multi-side proof with difficulties
+\newenvironment{prooflong}[1][22.7pt]
+  {\begin{longtable}{|p{\textwidth-#1}} \textit{Bizonyítás.}}
+  {\qed\end{longtable}\vspace{0.75em}}
+\newenvironment{proof2long}[1][22.7pt]
+  {\begin{longtable}{|p{\textwidth-#1}} $\dagger$ \textit{Bizonyítás:}}
+  {\qed\end{longtable}\vspace{0.75em}}
+\newenvironment{proof3long}[1][22.7pt]
+  {\begin{longtable}{|p{\textwidt-#1}} $\maltese$ \textit{Bizonyítás:}}
+  {\qed\end{longtable}\vspace{0.75em}}
+\newenvironment{proof4long}[1][22.7pt]
+  {\begin{longtable}{|p{\textwidth-#1}} $\pitchfork$ \textit{Bizonyítás:}}
+  {\qed\end{longtable}\vspace{0.75em}}
+\newenvironment{proof5long}[1][22.7pt]
+  {\begin{longtable}{|p{\textwidth-#1}} $\bigstar$ \textit{Bizonyítás:}}
+  {\qed\end{longtable}\vspace{0.75em}}

@@ -1,4 +1,11 @@
 #############
+## LaTeX
+#############
+
+# TeXmaker files
+*.bak
+
+#############
 ## Windows detritus
 #############
 

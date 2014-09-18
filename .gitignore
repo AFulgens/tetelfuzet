@@ -6,11 +6,14 @@
 *.bak
 
 # Generated files
+## Generic
 *.aux
 *.log
 *.out
 *.pdf
 *.synctex.gz
+## ToC and such
+*.lof
 *.toc
 
 #############

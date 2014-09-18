@@ -1,0 +1,65 @@
+% !TEX root = ../core/tetelfuzet.tex
+
+\section{Milyen számot nevezünk prímszámnak?
+\texorpdfstring{\\}{}
+Mikor mondjuk, hogy két vagy több egész szám relatív prím?}
+\label{003}
+
+\begin{defin}[Valódi osztó]
+Egy szám egyen és önmagán kívüli osztóit a szám \dashuline{valódi osztó}inak
+nevezzük (tehát az egy és a szám nem valódi osztó).
+
+Pl.: $6$ osztói: $1; 2; 3; 6$, melyekből a $2$ és a $3$ valódi osztók.
+\end{defin}
+
+\begin{defin}[Prímszám]
+Azokat az egynél nagyobb természetes számokat, amelyeknek pontosan két osztójuk
+van (az egy és önmaga) \dashuline{prímszám}oknak, vagy törzsszámoknak nevezzük.
+
+\end{defin}
+
+\begin{note2}[A $100$-nál kisebb prímszámok] $2$, $3$, $5$, $7$, $11$, $13$,
+$17$, $19$, $23$, $29$, $31$, $37$, $41$, $43$, $47$, $53$, $59$, $61$, $67$,
+$71$, $73$, $79$, $83$, $89$, $97$
+\end{note2}
+
+\begin{defin2}[Ikerprímek]
+Azokat a prímszámokból álló párokat, amelyek különbsége 2,
+\dashuline{ikerprímek}nek nevezzük. Például a $71, 73$ egy ikerprím pár.
+\end{defin2}
+
+\begin{theorem}[Prímek számossága]
+Végtelen sok prímszám van.
+\end{theorem}
+
+\begin{proof3}
+(Eukleidész: Elemek, 9. könyv, 20. tétel, i. e. 300 körül) Legyen $S$ prímek
+egy véges halmaza. Vegyük a következő számot:
+\[
+N = 1 + \prod_{p \in S}p
+\]
+Mivel $N$ természetes szám, ezért legalább egy prímszámmal osztható, ha
+prímszám, akkor saját magával. $N$ egyik osztója sem lehet benne az $S$
+halmazban, mert az azokkal való osztás során $1$ maradék képződik. Emiatt $N$
+prím osztóival tudjuk bővíteni az $S$ halmazt. Ebből következően minden véges,
+prímszámokból álló halmaz tetszőleges sokszor bővíthető.
+\end{proof3}
+
+\begin{defin}[Összetett szám]
+Azokat az egynél nagyobb természetes számokat, amelyeknek kettőnél több
+osztójuk van \dashuline{összetett szám}oknak nevezzük.
+\end{defin}
+
+\begin{corollary}
+A definíciókból következően az egyet sem prímszámnak, sem összetett számnak nem
+tekintjük.
+\end{corollary}
+
+\begin{defin}[Relatív prímek]
+Ha két pozitív egész szám legnagyobb közös osztója egy, akkor azokat
+\dashuline{relatív prímszámok}nak nevezzük.
+
+Például $lnko(25; 36) = 1$, tehát a $25$ és a $36$ relatív prímek.
+\end{defin}
+
+\textbf{Lásd még:}

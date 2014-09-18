@@ -1,0 +1,77 @@
+% !TEX root = ../core/tetelfuzet.tex
+
+\section{Igazolja a következő azonosságokat (\texorpdfstring{$a, b$}{a, b}
+valós számok, \texorpdfstring{$n, k$}{n, k} pozitív egészek)!}
+\subsection{\texorpdfstring{$(ab)^n = a^n \cdot b^n$}{(ab)**n = a**n * b**n}}
+Informálisan:
+
+$\rightarrow$ Szorzat $n$-edik hatványa egyenlő a tényezők $n$-edik hatványának
+szorzatával.
+
+$\leftarrow$ Azonos kitevőjű hatványokat úgy is szorozhatunk, hogy az alapok
+szorzatát a közös kitevőre emeljük.
+
+\begin{proof}
+
+$(ab)^n
+ \xlongequal{\ref{def:power}.}
+ \underbrace{(ab)(ab)(ab) \dotsm (ab)}_{n \text{ db}}
+ \xlongequal{\ref{def:commutat}., \ref{def:assoc}.}
+ \underbrace{a \cdot a \cdot a \dotsm a}_{n \text{ db}} \cdot
+   \underbrace{b \cdot b \cdot b \dotsm b}_{n \text{ db}}
+ \xlongequal{\ref{def:power}.}
+ a^n \cdot b^n
+$
+\end{proof}
+
+\begin{corollary2}
+$(a \cdot b \cdot c \cdot e \cdot f \dotsm k)^n 
+ =
+ a^n \cdot b^n \cdot c^n \cdot e^n \cdot f^n \dotsm k^n
+$
+\end{corollary2}
+
+\subsection{
+\texorpdfstring{$\Big(\dfrac{a}{b}\Big)^n = \dfrac{a^n}{b^n} \quad (b \neq 0)$}
+{(a/b)**n = a**n / b**n (b =/= 0)}}
+Informálisan:
+
+$\rightarrow$ Tört $n$-edik hatványa egyenlő a számláló és a nevező $n$-edik 
+hatványának a hányadosával.
+
+$\leftarrow$ Azonos kitevőjű hatványokat úgy is oszthatunk, hogy az alapok 
+hányadosát a közös kitevőre emeljük.
+
+\begin{proof}
+
+$\Big(\dfrac{a}{b}\Big)^n 
+ \xlongequal{\ref{def:power}}
+ \underbrace{\frac{a}{b} \cdot \frac{a}{b} \cdot \frac{a}{b}
+   \dotsm \frac{a}{b}}_{n \text{ db}}
+ \xlongequal{\ref{def:commutat}., \ref{def:assoc}.}
+ \overbrace{\underbrace{\frac{a \cdot a \cdot a \dotsm a}
+   {b \cdot b \cdot b \dotsm b}}_{n \text{ db}}}^{n \text{ db}}
+ \xlongequal{\ref{def:power}.}
+ \dfrac{a^n}{b^n}
+$
+\end{proof}
+
+\subsection{\texorpdfstring{$(a^n)^k = a^{n \cdot k}$}{(a**n)**k = a**(n * k)}}
+Informálisan:
+
+Hatványt úgy is hatványozhatunk, hogy az alapot a kitevők szorzatára emeljük.
+
+\begin{proof}
+
+$(a^n)^k
+ \xlongequal{\ref{def:power}.}
+ \underbrace{a^n \cdot a^n \dotsm a^n}_{k \text{ db}} 
+ \xlongequal{\ref{def:power}.}
+ \underbrace{\underbrace{a \cdot a \cdot a \dotsm a}_{n \text{ db}}
+   \cdot \underbrace{a \cdot a \cdot a \dotsm a}_{n \text{ db}} \dotsm
+   \underbrace{a \cdot a \cdot a \dotsm a}_{n \text{ db}}}_{k \text{ db}}
+ \xlongequal{\ref{def:power}.} a^{n \cdot k}
+$
+\end{proof}
+
+\textbf{Lásd még:}

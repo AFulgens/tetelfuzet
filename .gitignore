@@ -5,6 +5,13 @@
 # TeXmaker files
 *.bak
 
+# Generated files
+*.aux
+*.log
+*.out
+*.pdf
+*.synctex.gz
+
 #############
 ## Windows detritus
 #############

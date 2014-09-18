@@ -1,4 +1,58 @@
 % !TEX root = ../core/tetelfuzet.tex
 
-\section{Test \texorpdfstring{$\defarrow$}{<=def=>} this is a placeholder.}
-Test $\defarrow$ this is a placeholder.
+\section{Mit értünk két vagy több egész szám legnagyobb közös osztóján?
+  Hogyan határozható meg?}
+\label{001}
+
+\begin{defin}[Közös osztó]
+Két vagy több pozitív egész szám \dashuline{közös osztó}i azok a természetes
+számok, amelyek mindegyik számnak osztói (a közös osztók száma véges).
+\end{defin}
+
+\begin{defin}[Legnagyobb közös osztó]
+A közös osztók közül a legnagyobb nevezetes, ezt nevezzük \dashuline{legnagyobb
+közös osztó}nak.
+
+\uline{Jelölése:} $(a; b)$ vagy ha egyébként félreérthető, akkor $lnko(a; b)$,
+angol szövegben $gcd(a; b)$ (\hunquote{greatest common divisor}) vagy $hcd(a;
+b)$ (\hunquote{highest common factor}).
+\end{defin}
+
+\begin{method}[Legnagyobb közös osztó meghatározása]
+A legnagyobb közös osztó meghatározásánál először felírjuk a számok
+prímtényezős felbontását. Ezután a \emph{közös} prímszámok mindegyikénél
+megkeressük a \emph{legkisebb} hatványkitevőjűt. Ezen legkisebb kitevőjű
+prímszámhatványoknak a \emph{szorzata} lesz a számok legnagyobb közös osztója.
+Ha nincs közös prímszám, akkor a legnagyobb közös osztó az egy.
+\end{method}
+
+\begin{note2}[Törtek egyszerűsítése]
+Törteket a számláló és a nevező legnagyobb közös osztójával érdemes
+egyszerűsíteni.
+\end{note2}
+
+\begin{method4}[Euklideszi-algoritmus]
+Nagyon nagy számoknál a prímosztók meghatározása nehéz lehet, sok számolást
+igényel. Két szám legnagyobb közös osztóját azonban meg tudjuk határozni a
+prímszorzók megléte nélkül is a következő módon: írjuk le a két számot egymás
+mellé. Vonjuk ki a nagyobból a kisebbiket, majd írjuk le az eredményt és a
+kisebb számot egymás mellé. Az eljárást ismételjük addig, amíg a két szám nem
+egyezik meg, a megegyező szám a két szám legnagyobb közös osztója.
+
+Például: $lnko(1989; 867) = 51$, mert:
+\[
+\begin{array}{r|l}
+  1989 & 867 \\
+  1122 & 867 \\
+  255 & 867 \\
+  255 & 612 \\
+  255 & 357 \\
+  255 & 102 \\
+  153 & 102 \\
+  51 & 102 \\
+  51 & 51 \\
+\end{array}
+\]
+\end{method4}
+
+\textbf{Lásd még:}

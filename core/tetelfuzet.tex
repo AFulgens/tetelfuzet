@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                             %
+% Tételfüzet                                                                  %
+% Copyright (C) 2014 KOVÁCS Dániel (a.fulgens.87@gmail.com)                   %
+%                                                                             %
+% This work is licensed under                                                 %
+% http://creativecommons.org/licenses/by-nc-sa/4.0/                           %
+%                                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% DOCUMENT DEFINITION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage[l2tabu, orthodox]{nag}
+
+\documentclass[a4paper,12pt
+%,draft
+]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+%%%%% PACKAGE IMPORTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Showframe clashes with xcolor, pass appropriate options fork workaround
+%\PassOptionsToPackage{usenames, dvipsnames}{xcolor}
+%\usepackage{showframe}
+\usepackage[usenames, dvipsnames]{xcolor}
+
+% Hungarian specific packages
+\usepackage[magyar]{babel}
+\bibliographystyle{huplain}
+
+% Math, symbol packages
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{mathtools}
+\usepackage{ulsy}
+%\usepackage{extarrows}
+%\usepackage{wasysym}
+%\usepackage{capt-of}
+%\usepackage{simplewick}
+
+% Packages for figures
+%\usepackage{graphicx}
+%\usepackage{subfig}
+\usepackage{longtable}
+
+% Licenses
+\usepackage{cclicenses}
+
+% References
+\usepackage[sort,nobreak,nocompress]{cite}
+\usepackage[bookmarks,bookmarksnumbered,breaklinks,unicode=true]{hyperref}
+
+% Font
+\usepackage{lmodern}
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,
+  spacing=true,factor=1100,stretch=10,shrink=10]
+  {microtype}
+
+% Miscellaneous 
+\usepackage[normalem]{ulem}
+
+\usepackage{enumerate}
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\circ$}
+
+\usepackage{dcolumn}
+\newcolumntype{.}{D{.}{:}{2}}
+\newcolumntype{,}{D{,}{,}{2}}
+
+% Titles
+\usepackage{titletoc}
+\usepackage{titlesec}
+
+%%%%% GENERAL SETTINGS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Hungarian specific settings
+\lefthyphenmin = 3
+\righthyphenmin = 3
+\frenchspacing
+
+% Titles
+\renewcommand*{\theHsection}{\thesection}
+
+\titlecontents{section}[1.5em]{\addvspace{.5ex}\bfseries}
+  {\contentslabel{3em}}{}{\titlerule*[0.3pc]{}\contentspage}
+\titlecontents{subsection}[1.5em]{\hspace{2em}}{\contentslabel{2em}}{}
+  {\titlerule*[0.3pc]{}\contentspage}
+
+\renewcommand\thesection{\arabic{section}}
+\titleformat{\section}
+  {\color{NavyBlue}\normalfont\bfseries}
+  {\color{NavyBlue}\thesection}{1em}{}{}{}
+
+\renewcommand\thesubsection{\alph{subsection})}
+\titleformat{\subsection}
+  {\color{MidnightBlue}\normalfont\bfseries}
+  {\hspace{1em}\color{MidnightBlue}\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+  {\color{BlueViolet}\normalfont\bfseries}
+  {\hspace{2em}\color{BlueViolet}\thesubsubsection.}{1em}{}
+
+% Miscellaneous
+\allowdisplaybreaks
+
+%%%%% DOCUMENT BEGINS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\input{../core/macros}
+
+Test $\defarrow$ this is a placeholder.
+
+%%%%% DOCUMENT ENDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

@@ -1,0 +1,130 @@
+% !TEX root = ../core/tetelfuzet.tex
+
+\section{Mi a számelmélet alaptétele?}
+\label{010}
+
+\begin{theorem}[A számelmélet alaptétele]
+Bármely összetett szám a tényezők sorrendjétől eltekintve egyértelműen
+felírható prímszámok szorzataként.
+\end{theorem}
+
+\begin{proof4long}
+\begin{lemma4}[Bézout lemmája]
+\label{lemma:bezout}
+Legyen $a, b \in \Integers \backslash \{0\}$. Legyen $d = lnko(a; b)$. Ekkor:
+\[
+  \exists x, y \in \Integers: ax + by = d
+\]
+Továbbá:
+\begin{enumerate}[i)]
+\item $d$ a legkisebb $ax + by$ alakban felírható egész szám
+\item minden $ax + by$ alakú egész $d$ többszöröse
+\end{enumerate}
+Az $x, y$ számokat az $(a; b)$ pár Bézout együtthatóinak hívjuk, és nem
+egyértelműek (adott számpárra végtelen sok Bézout együtthatópár létezik).
+
+Pl.: $a \coloneqq 12, b \coloneqq 42 \Rightarrow d = lnko(12; 42) = 6$. Ekkor
+néhány lehetséges Bézout együtthatópár:
+$(-10; 3); (-3; 1); (4; -1); (11; -3); (18; -5);$ stb.
+\end{lemma4}\\[-1em]
+\begin{proof4}[35.1pt]
+Tudjuk, hogy egy $b$ nem nulla egész szám bármely egész számmal vett osztás
+utána maradéka szigorúan kisebb, mint $|b|$.
+
+Adott nem nulla $a$ és $b$ egészekre létezik nem nulla egész
+$d = as + bt$ ($s, t \in \Integers$), aminek abszolútértéke minimális az
+$ax + by$ alakú egészek között. Feltehetjük, hogy $d > 0$ (mert ha nem, akkor
+$s, t$ előjelét annak megfelelően változtassuk meg).
+
+Ekkor ha $a$-t vagy $b$-t osztjuk $d$-vel, akkor a maradék is $ax + by$ alakú
+lesz, hiszen $d = as + bt$ valahányszorosát vontuk ki a számból. Másrészt a
+maradék szigorúan kisebb, mint $d$. Ezek miatt a maradék biztosan $0$, tehát 
+$d$ osztója $a$-nak és $b$-nek is.
+
+Ha létezik $c$ másik közös osztója $a$-nak és $b$-nek, akkor $c$ szintén osztja
+$as + bt = d$-t, ami azt jelenti, hogy $d$ az $a$ és $b$ számok legnagyobb
+közös osztója.
+\end{proof4}\\[-1em]
+\begin{lemma3}[Eukleidész lemmája]
+\label{lemma:euclid}
+Legyen $p$ prímszám, ami osztja $a \cdot b$-t, ahol $a, b \in \Integers$. Ekkor
+$p$ osztója $a$-nak vagy $b$-nek (esetleg mindkettőnek).
+
+Általánosabban: $n | ab, lnko(n; a) = 1 \Rightarrow n|b$.
+\end{lemma3}\\[-1em]
+\begin{proof4}[35.1pt]
+Legyenek $x, y \in \Integers, lnko(x; y) = 1$. Ekkor
+$\exists r, s \in \Integers$: $rx + sy = 1$.
+
+Legyenek továbbá $a, b, n \in \Integers, lnko(a; b) = 1, n | ab$.
+\ref{lemma:bezout}. miatt $\exists r, s: rn + sa = 1$.
+
+Szorozva mindkét oldalt $b$-vel azt kapjuk, hogy: $rnb + sab = b$.
+
+$rnb$ osztható $n$-nel, $sab$ osztható $ab$-vel, ami osztható $n$-nel. Emiatt
+összegük, ami $b$, szintén osztható lesz $n$-nel.
+\end{proof4}\\
+\textbf{Létezik:} Teljes indukcióval. Könnyen látható, hogy
+\dashuline{$n = 2, 3, 4$ esetén} prímszámok szorzatáról beszélünk. Tegyük fel,
+hogy $n-1$-nek létezik prímtényezős felbontása. \dashuline{Tekintsük $n$-t}:
+\begin{itemize}
+\item $n$ prím: kész vagyunk $\checkmark$
+\item $n$ nem prím: $\exists a, b \in \Integers: 1 < a \leq b < n = ab$. Az
+indukciós feltétel miatt $a = p_1p_2\dotsm p_n$ és $b = q_1q_2\dotsm q_m$ (ahol
+$i \in [1 .. n]: p_i$ és $j \in [1 ..m]: q_j$ mind prímek), tehát
+$ab = p_1p_2\dotsm p_nq_1q_2\dotsm q_m$ is prímek szorzata $\checkmark$
+\end{itemize}\\
+\textbf{Egyértelmű:} Indirekt módon. Tegyük fel, hogy
+$s = p_1p_2\dotsm p_n = q_1q_2\dotsm q_m$, ahol
+$i \in [1 .. n]: p_i, j \in [1 .. m]: q_j$ mind prímek és legalább egy
+különböző elem van a két szorzatban. Be kell látnunk, hogy $m = n$ és $q_j$ a
+$p_i$-k megfelelő sorrendben rendezésével egyenlőek.
+
+\ref{lemma:euclid}. miatt $p_1$ valamelyik $q_j$-nek osztója. Tegyük fel, hogy
+$p_1$ osztja $q_1$-et (ha nem, akkor indexeljük újra ennek megfelelően a
+$q$-kat). Mivel $q_1$ prím, ezért csak $1$ és önmaga az osztói, tehát
+$p_1 = q_1$, azaz: $\dfrac{s}{p_1} = p_2\dotsm p_n = q_2\dotsm q_m$. Ezt a
+gondolatot alkalmazhatjuk $n$-szer, tehát tudjuk, hogy $n \leq m$. Ekkor a
+maradékunk: $\dfrac{s}{p_1p_2\dotsm p_n} = 1 = q_{n+1}\dotsm q_m$. Ez
+lehetetlen, mivel prímek szorzata nem lehet $1$ \blitza $\Rightarrow m = n$ és
+minden $q_j$ megegyezik valamely $p_i$-vel.
+
+\end{proof4long}
+
+\begin{defin2}[Kanonikus alak]
+Egy szám \dashuline{kanonikus alakjá}nak azt a prímtényezős felbontását
+nevezzük, amiben a tényezők növekvő sorrendbe vannak rendezve és a megegyező
+prímeket hatványként írjuk le, például $79380$ kanonikus alakja:
+$2^2 \cdot 3^4 \cdot 5 \cdot 7^2$.
+\end{defin2}
+
+\begin{method2}[Kanonikus alak meghatározása]
+Egy szám kanonikus alakját (általánosan ún. prímfaktorizációját)
+meghatározhatjuk például úgy, hogy vesszük a számot, és elosztjuk a legkisebb
+prímmel, ami osztója. Ezt a prímet feljegyezzük, a maradékra pedig
+megismételjük a műveletet, amíg a maradék nem $1$.
+
+Ha nem a legkisebb, hanem tetszőleges prímszámmal osztunk a folyamat során,
+akkor nem a kanonikus alakot kapjuk, de a prímek növekvő sorrendbe rendezésével
+megkapjuk a kanonikus alakot.
+
+Például:
+\[
+\begin{array}{r|l}
+  79380 & 2 \\
+  39690 & 2 \\
+  19845 & 3 \\
+  6615 & 3 \\
+  2205 & 3 \\
+  735 & 3 \\
+  245 & 5 \\
+  49 & 7 \\
+  7 & 7 \\
+  1 &
+\end{array}
+\]
+
+Ez alapján $79380$ kanonikus alakja $2^2 \cdot 3^4 \cdot 5 \cdot 7^2$.
+\end{method2}
+
+\textbf{Lásd még:}

@@ -30,4 +30,4 @@ License
 =======
 
 The project and every file in it is my own creation and is licensed under 
-CC-BY-NA-SC, even though this license notice is not copied into every file.
+CC-BY-SA, even though this license notice is not copied into every file.

@@ -1,0 +1,44 @@
+% !TEX root = ../core/tetelfuzet.tex
+
+\section{Hogyan definiálja egy pozitív szám \texorpdfstring{$0$}{0}, negatív
+  egész és racionális kitevőjű hatványát?}
+
+A hatványfogalom kiterjesztése úgy történik, hogy a már megismert
+hatványazonosságok érvényben maradjanak.
+
+\begin{defin}[Nulla kitevőjű hatvány értelmezése]
+Bármely nullától különböző valós szám nulladik hatványa $1$. Azaz:
+\[
+  a \in \Reals \backslash \{0\}: a^0 = 1
+\]
+\end{defin}
+
+\begin{defin}[Negatív egész kitevőjű hatvány értelmezése]
+Bármely nullától különböző valós szám negatív egész kitevőjű hatványa egyenlő
+az alap ellentett kitevőjű hatványának reciprokával. Azaz:
+\[
+  a \in \Reals \backslash \{0\}, n \in \Naturals: a^{-n} = \dfrac{1}{a^n}
+\]
+\end{defin}
+
+\begin{defin}[Racionális kitevőjű hatvány értelmezése]
+Egy pozitív valós $a$ szám $\dfrac{m}{n}$-edik hatványa a pozitív $a$ alapnak
+az $m$-edik hatványából vont $n$-edik gyöke. Azaz:
+\[
+  a \in \Reals^+, m, n \in \Integers, n > 1: a^{\frac{m}{n}} = \sqrt[n]{a^m}
+\]
+
+Vagyis a tört kitevőjű hatvány gyökös alakra írható át és fordítva, a gyökös
+alak tört kitevőjű hatvány alakra írható.
+\end{defin}
+
+\begin{defin4}[Irracionális kitevőjű hatvány értelmezése]
+Egy pozitív $a$ valós szám irracionális kitevőjű hatványát két ekvivalens módon
+vezethetjük be ($a \in \Reals^+, b \in \Irrationals$):
+\begin{enumerate}[i)]
+\item az ún. közelítő módszerrel: $a^b = \lim\limits_{x \to b} a^x$
+\item logaritmus és az $e$ szám segítségével: $a^b = e^{b \cdot \ln a}$
+\end{enumerate}
+\end{defin4}
+
+\textbf{Lásd még:}

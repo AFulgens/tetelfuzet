@@ -1,0 +1,47 @@
+% !TEX root = ../core/tetelfuzet.tex
+
+\section{Bizonyítsa be, hogy a \texorpdfstring{$\sqrt{2}$}{sqrt(2)}
+  irracionális szám!}
+\label{011}
+
+\begin{theorem}
+$\sqrt{2} \in \Irrationals$
+\end{theorem}
+
+\begin{proof2}
+Indirekt módon.
+Tegyük fel, hogy $\sqrt{2} \in \Rationals$, vagyis felírható két egész szám 
+hányadosaként. Ekkor:
+{\begin{align*}
+  \sqrt{2} &= \dfrac{p}{q} 
+    & p, q \in \Integers^+ \Leftarrow \sqrt{2} \geq 0\\
+  (\sqrt{2})^2 &= \Big(\dfrac{p}{q}\Big)^2 
+    & /()^2\text{, megtehetjük, mert mindkét oldal pozitív}\\
+  2 &= \dfrac{p^2}{q^2} 
+    & /\cdot q^2\\
+  2q^2 &= p^2
+\end{align*}}
+Tudjuk, hogy minden összetett számnak csak egy kanonikus alakja van.
+Ezek szerint:
+\[
+\left.
+\begin{array}{ll}
+  p^2, q^2 & 
+    \left.
+    \begin{array}{l}
+      \text{számokban minden prímtényező}\\
+      \text{páros kitevővel szerepel}\\
+    \end{array}
+    \right.
+  \\
+  2q^2 & \text{számban a $2$ kitevője páratlan}\\
+  p^2 & \text{számban a $2$ kitevője $0$ vagy páros}
+  \end{array}
+\right\}
+  \Rightarrow 2q^2 \neq p^2
+\]
+
+\blitza Ellentmondásra jutottunk $\Rightarrow \sqrt{2} \notin \Rationals \xRightarrow{\sqrt{2} \in \Reals} \sqrt{2} \in \Irrationals$
+\end{proof2}
+
+\textbf{Lásd még:} \ref{006}, \ref{008}, \ref{009}, \ref{010}

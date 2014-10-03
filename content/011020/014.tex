@@ -1,0 +1,101 @@
+% !TEX root = ../../core/tetelfuzet.tex
+
+\section{Igazolja a következő azonosságokat! Milyen kikötéseket kell tenni 
+  \texorpdfstring{$a$}{a}-ra, 
+  \texorpdfstring{$b$}{b}-re, 
+  \texorpdfstring{$n$}{n}-re és 
+  \texorpdfstring{$k$}{k}-ra?}
+\label{014}
+
+\subsection{
+\texorpdfstring
+  {$\sqrt[n]{ab} = \sqrt[n]{a} \cdot \sqrt[n]{b}$}
+  {(ab)**(1/n) = a**(1/n) * b**(1/n)}
+}
+
+Informálisan:
+
+$\rightarrow$ Szorzat $n$-edik gyöke egyenlő a tényezők $n$-edik gyökének
+szorzatával.
+
+$\leftarrow$ $n$-edik gyökös kifejezések szorzata egyenlő a gyök alatti
+kifejezések szorzatának $n$-edik gyökével.
+
+\begin{proof}
+
+$ \sqrt[n]{ab} 
+ \xlongequal{\ref{def:nthroot}.}
+  (ab)^{\frac{1}{n}}
+ \xlongequal{\ref{q:powereq}/\ref{theo:powermul}}
+  a^{\frac{1}{n}} \cdot b^{\frac{1}{n}} 
+ \xlongequal{\ref{def:nthroot}.} 
+  \sqrt[n]{a} \cdot \sqrt[n]{b}
+$
+
+Feltéve, hogy: $n \in \Naturals, n >1$ és
+\begin{itemize}
+  \item ha $n$ páros, akkor $a, b \in \Reals \backslash \Reals^-$;
+  \item ha $n$ páratlan, akkor $a, b \in \Reals$.
+\end{itemize}
+\end{proof}
+
+\subsection{
+\texorpdfstring
+  {$\sqrt[n]{\frac{a}{b}} = \frac{\sqrt[n]{a}}{\sqrt[n]{b}}$}
+  {(a/b)**n = a**n / b**n}
+}
+
+Informálisan:
+
+$\rightarrow$ Tört $n$-edik gyöke egyenlő a számláló $n$-edik gyökének és a
+nevező $n$-edik gyökének hányadosával.
+
+$\leftarrow$ $n$-edik gyökös kifejezések hányadosa egyenlő a gyök alatti
+kifejezések hányadosának $n$-edik gyökével.
+
+\begin{proof}
+
+$ \sqrt[n]{\Big(\dfrac{a}{b}\Big)} 
+ \xlongequal{\ref{def:nthroot}.}
+  \Big(\dfrac{a}{b}\Big)^{\frac{1}{n}}
+ \xlongequal{\ref{q:powereq}/\ref{theo:powerdiv}}
+  \dfrac{a^{\frac{1}{n}}}{b^{\frac{1}{n}}}
+ \xlongequal{\ref{def:nthroot}.}
+  \dfrac{\sqrt[n]{a}}{\sqrt[n]{b}}
+$
+
+Feltéve, hogy: $n \in \Naturals, n >1$ és
+\begin{itemize}
+  \item ha $n$ páros, akkor $a \in \Reals \backslash \Reals^-, b \in \Reals^+$;
+  \item ha $n$ páratlan, akkor $a, b \in \Reals, b \neq 0$.
+\end{itemize}
+\end{proof}
+	
+\subsection{
+\texorpdfstring
+  {$(\sqrt[k]{a})^n = \sqrt[k]{a^n}$}
+  {(a**(1/k))**n = (a**n)**(1/k)}
+}
+Informálisan:
+
+Hatvány $k$-adik gyöke egyenlő az alap $k$-adik gyökének hatványával.
+
+\begin{proof}
+
+$ (\sqrt[k]{a})^n 
+ \xlongequal{\ref{def:nthroot}.}
+  (a^{\frac{1}{k}})^n
+ \xlongequal{\ref{q:powereq}/\ref{theo:powerpow}}
+  a^{\frac{n}{k}}
+ \xlongequal{\ref{def:nthroot}.}
+  \sqrt[k]{a^n}
+$
+
+Feltéve, hogy: $k \in \Naturals, k >1, n \in \Integers$ és
+\begin{itemize}
+  \item ha $n$ páros, akkor $a \in \Reals \backslash \Reals^-$;
+  \item ha $n$ páratlan, akkor $a \in \Reals$.
+\end{itemize}
+\end{proof}
+	
+\textbf{Lásd még:} 

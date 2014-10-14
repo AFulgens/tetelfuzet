@@ -1,0 +1,93 @@
+% !TEX root = ../../core/tetelfuzet.tex
+
+\section{Igazolja a következő azonosságokat! Milyen kikötéseket kell tenni
+\texorpdfstring{$x$}{x}-re, \texorpdfstring{$y$}{y}-ra,
+\texorpdfstring{$a$}{a}-ra és \texorpdfstring{$k$}{k}-ra?}
+\label{017}
+
+Legyenek $a, x, y \in \Reals^+, k \in \Reals$ és $a \neq 1$. Ekkor:
+
+\subsection{
+\texorpdfstring
+  {$\log_{a}xy = \log_{a}x + \log_{a}y$}
+  {log\textunderscore{}a(xy) = log\textunderscore{}a(x) 
+    + log\textunderscore{}a(y)}
+}
+
+Informálisan:
+
+$\rightarrow$ Szorzat logaritmusa egyenlő a tényezők ugyanazon alapú
+logaritmusának az összegével.
+
+$\leftarrow$ Ugyanazon alapú logaritmusok összege egyenlő a numeruszok
+szorzatának ugyanazon alapú logaritmusával.
+
+\begin{proof}
+$
+  a^{\log_{a}x\cdot y} 
+    \xlongequal{\ref{def:log}.} 
+  x \cdot y
+    \xlongequal{\ref{def:log}.}
+  a^{\log_{a}x} \cdot a^{\log_{a}y}
+    \xlongequal{\ref{q:powereq}/\ref{theo:powermul}}
+  a^{\log_{a}x + \log_{a} y}
+    \Rightarrow$\\$\Rightarrow
+  \log_{a}x \cdot y = \log_{a}x + \log_{a}y
+$
+\end{proof}
+
+\subsection{
+\texorpdfstring
+  {$\log_{a}\dfrac{x}{y} = \log_{a}x - \log_{a}y$}
+  {log\textunderscore{}a(x/y) = log\textunderscore{}a(x) -
+    - log\textunderscore{}a(y)}
+}
+
+Informálisan:
+
+$\rightarrow$ Tört logaritmusa egyenlő a számláló és a nevező ugyanazon alapú
+logaritmusának az különbségével.
+
+$\leftarrow$ Ugyanazon alapú logaritmusok különbsége egyenlő a numeruszok
+hányadosának ugyanazon alapú logaritmusával.
+
+\begin{proof}
+$
+  a^{\log_{a}\frac{x}{y}}
+    \xlongequal{\ref{def:log}.}
+  \dfrac{x}{y}
+    \xlongequal{\ref{def:log}.}
+  \dfrac{a^{\log_{a}x}}{a^{\log_{a}y}}
+    \xlongequal{\frac{a^n}{a^m} = a^{n-m}}
+  a^{\log_{a}x - \log_{a} y}
+    \Rightarrow$\\$\Rightarrow 
+  \log_{a}\dfrac{x}{y} = \log_{a}x - \log_{a}y
+$
+\end{proof}	
+
+\subsection{
+\texorpdfstring
+  {$\log_{a}x^k = k \cdot \log_{a}x$}
+  {log\textunderscore{}a(x**k) = k * log\textunderscore{}a(x)}
+}
+
+Informálisan:
+
+Hatvány logaritmusa egyenlő a hatványkitevőnek és a hatványalap ugyanazon alapú
+logaritmusának a szorzatával.
+
+\begin{proof}
+$
+  a^{\log_{a}x^k}
+    \xlongequal{\ref{def:log}.}
+  x^k
+    \xlongequal{\ref{def:log}.}
+  (a^{\log_{a}x})^k
+    \xlongequal{\ref{q:powereq}/\ref{theo:powerpow}}
+  a^{k \cdot \log_{a}x}
+    \Rightarrow
+  \log_{a}x^k = k \cdot \log_{a}x
+$
+\end{proof}	
+
+\textbf{Lásd még:}
